@@ -1,3 +1,26 @@
+# -*- coding: utf-8 -*-
+"""
+豆瓣读书 TOP250 图书爬虫
+
+本模块旨在从豆瓣读书 TOP250 排行榜 (book.douban.com/top250) 爬取数据。
+它为每本书收集各种信息，包括：
+- 书名
+- 作者
+- 评分
+-评价人数
+- 出版年份
+- 出版社
+- 简短引言/描述
+- 书籍页面的链接
+
+爬取的数据随后保存到名为 'douban_top250.xlsx' 的 Excel 文件中，
+该文件将位于 'python_project' 目录下。
+
+此脚本主要使用以下库：
+- requests: 用于发出 HTTP GET 请求以获取网页内容。
+- BeautifulSoup (来自 bs4): 用于解析页面的 HTML 结构。
+- openpyxl: 用于创建 .xlsx Excel 文件并向其写入数据。
+"""
 import requests
 from bs4 import BeautifulSoup
 import openpyxl
